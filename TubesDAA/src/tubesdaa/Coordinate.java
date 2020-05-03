@@ -1,14 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tubesdaa;
+import java.util.Objects;
 
 /**
- *
- * @author USER
+ * Created by
  */
 public class Coordinate {
-    
+    int xPos, yPos;
+
+    public Coordinate(int _x, int _y) {
+        this.xPos = _x;
+        this.yPos = _y;
+    }
+
+    public String toString() {
+        return "xPos: " + xPos + ", yPos: " + yPos;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof Coordinate)) {
+            return false;
+        }
+        Coordinate other = (Coordinate) obj;
+        return this.xPos == other.xPos && this.yPos == other.yPos;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(xPos, yPos);
+    }
 }
