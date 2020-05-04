@@ -2,7 +2,7 @@ package tubesdaa;
 import java.util.Objects;
 
 /**
- * Created by
+ * Created by 
  */
 public class Coordinate {
     int xPos, yPos;
@@ -12,6 +12,7 @@ public class Coordinate {
         this.yPos = _y;
     }
 
+    @Override
     public String toString() {
         return "xPos: " + xPos + ", yPos: " + yPos;
     }

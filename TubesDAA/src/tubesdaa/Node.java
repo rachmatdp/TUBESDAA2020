@@ -72,6 +72,7 @@ public class Node implements Comparable<Node> {
         return type;
     }
 
+    @Override
     public String toString() {
         return coordinate + "; G:" + g + ", H:" + h + ", F:" + getF() + "; Type: " + type;
     }
